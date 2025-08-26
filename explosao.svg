@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480">
+  <rect width="100%" height="100%" fill="#150b0b"/>
+  <g transform="translate(320,240)">
+    <polygon points="0,-160 30,-40 150,-30 40,20 70,140 0,60 -70,140 -40,20 -150,-30 -30,-40" fill="#ff9f1c"/>
+    <polygon points="0,-120 20,-30 110,-20 30,10 50,100 0,40 -50,100 -30,10 -110,-20 -20,-30" fill="#ff3d3d"/>
+    <circle r="26" fill="#fff071"/>
+  </g>
+  <text x="50%" y="430" text-anchor="middle" fill="#ffb3b3" font-family="Arial" font-size="18">Mistura insegura! Siga as regras de ouro. ⚠️</text>
+</svg>
