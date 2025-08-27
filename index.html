@@ -2,42 +2,70 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>O Desafio da Luz Química</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Jogo - Camaleão Químico</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f4f4f4;
+    }
+    #experimento {
+      margin: 20px auto;
+      width: 300px;
+      height: 300px;
+      position: relative;
+      border: 2px dashed #ccc;
+      border-radius: 12px;
+      background: white;
+    }
+    #experimento img {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+    .item {
+      width: 80px;
+      cursor: grab;
+      margin: 10px;
+    }
+    .btn {
+      margin: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background: #4CAF50;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #45a049;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>O Desafio da Luz Química</h1>
-    <p class="sub">Prepare as soluções A, B e C e ative a luz azul! <span class="tag">Experimento</span>
-  </header>
 
-  <main id="app" class="card">
-    <div class="img-wrap">
-      <img id="imagem" src="experimento.svg" alt="Experimento químico">
-    </div>
+  <h1>Experimento: Camaleão Químico</h1>
+  <p id="texto">Arraste o comprimido até o béquer para começar.</p>
 
-    <div id="texto" class="texto">
-      <p id="pergunta">Pergunta aparecerá aqui</p>
-      <div id="alternativas">
-        <button id="btnA" class="btn">Alternativa A</button>
-        <button id="btnB" class="btn btn-sec">Alternativa B</button>
-      </div>
-    </div>
-  </main>
+  <div id="experimento">
+    <img id="bequer" src="svg_camaleao/bequer_vazio.svg" alt="Béquer vazio">
+  </div>
 
-  <footer>
-    <div class="regras">
-      <strong>Regras de Ouro:</strong>
-      <ul>
-        <li>👁️ Use óculos de proteção SEMPRE.</li>
-        <li>🧤 Use luvas e jaleco.</li>
-        <li>🧠 Trabalhe com um professor por perto.</li>
-      </ul>
-    </div>
-    <p class="creditos">Jogo educativo — Marcos & Isabela • 2025</p>
-  </footer>
+  <div id="objetos">
+    <img id="comprimido" class="item" src="svg_camaleao/comprimido.svg" draggable="true" alt="Comprimido">
+  </div>
 
+  <div>
+    <button id="btnPergunta" class="btn" style="display:none;">Responder pergunta</button>
+    <button id="btnSolucao2" class="btn" style="display:none;">Adicionar Solução 2</button>
+  </div>
+
+  <!-- Importa o JS externo -->
   <script src="script.js"></script>
+
 </body>
 </html>
