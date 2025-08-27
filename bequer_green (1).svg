@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+      <feOffset dx="0" dy="3" result="offsetblur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.25"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="glassGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dfe9f6" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="liquidGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0.6"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#bbf7d0" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#bbf7d0" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="beakerClip">
+      <path d="
+        M 81.92 76.8
+        Q 256.0 48.64 430.08000000000004 76.8
+        L 402.0224 435.2
+        Q 256.0 453.12 109.9776 435.2
+        Z"/>
+    </clipPath>
+  </defs>
+
+  <ellipse cx="256.0" cy="286.72" rx="194.56" ry="92.16" fill="url(#glow)" />
+  <ellipse cx="256.0" cy="445.2" rx="143.36" ry="12.8" fill="#000" opacity="0.2"/>
+
+  <g filter="url(#softShadow)">
+    <path d="
+      M 81.92 76.8
+      Q 256.0 48.64 430.08000000000004 76.8
+      L 402.0224 435.2
+      Q 256.0 453.12 109.9776 435.2
+      Z"
+      fill="url(#glassGrad)" stroke="#1e293b" stroke-width="6.144" opacity="0.95"/>
+  </g>
+
+  <g clip-path="url(#beakerClip)">
+    <rect x="97.28" y="263.168" width="317.44" height="172.03199999999998" fill="url(#liquidGrad)"/>
+    <path d="M 97.28 263.168 Q 256.0 269.312 414.72 263.168" fill="#ffffff" opacity="0.25"/>
+  </g>
+
+  <path d="M 160.768 72.704 Q 256.0 61.44 351.23199999999997 72.704"
+        stroke="#ffffff" stroke-opacity="0.5" stroke-width="5.12" fill="none"/>
+
+  <path d="M 132.1984 97.28 Q 119.5008 204.8 160.768 378.88" stroke="#ffffff" stroke-opacity="0.3" stroke-width="5.12" fill="none"/>
+  <path d="M 351.23199999999997 112.64 Q 389.3248 245.76 317.9008 373.76" stroke="#ffffff" stroke-opacity="0.2" stroke-width="4.608" fill="none"/>
+
+  <g stroke="#1e293b" stroke-width="4.608" opacity="0.5">
+    <line x1="122.68" y1="112.64" x2="141.72" y2="112.64"/>
+    <line x1="122.68" y1="148.48" x2="141.72" y2="148.48"/>
+    <line x1="122.68" y1="184.32" x2="141.72" y2="184.32"/>
+    <line x1="122.68" y1="220.16" x2="141.72" y2="220.16"/>
+    <line x1="122.68" y1="256.00" x2="141.72" y2="256.00"/>
+    <line x1="122.68" y1="291.84" x2="141.72" y2="291.84"/>
+    <line x1="122.68" y1="327.68" x2="141.72" y2="327.68"/>
+    <line x1="122.68" y1="363.52" x2="141.72" y2="363.52"/>
+    <line x1="122.68" y1="399.36" x2="141.72" y2="399.36"/>
+  </g>
+
+  <circle cx="176.64" cy="263.17" r="5.12" fill="#ffffff" opacity="0.3"/>
+  <circle cx="227.84" cy="293.89" r="6.66" fill="#ffffff" opacity="0.3"/>
+  <circle cx="279.04" cy="324.61" r="8.19" fill="#ffffff" opacity="0.3"/>
+  <circle cx="330.24" cy="355.33" r="5.12" fill="#ffffff" opacity="0.3"/>
+  <circle cx="176.64" cy="386.05" r="6.66" fill="#ffffff" opacity="0.3"/>
+  <circle cx="227.84" cy="416.77" r="8.19" fill="#ffffff" opacity="0.3"/>
+  <circle cx="279.04" cy="275.46" r="5.12" fill="#ffffff" opacity="0.3"/>
+</svg>
